@@ -1,0 +1,8 @@
+**/bin
+**/obj
+.git
+.atl
+.claude
+tests
+README.md
+**/*.user

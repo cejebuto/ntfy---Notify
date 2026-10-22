@@ -1,0 +1,11 @@
+services:
+  notify:
+    build: .
+    image: notify-ntfy-tester
+    ports:
+      - "127.0.0.1:4444:4444"
+    restart: unless-stopped
+    environment:
+      - ASPNETCORE_URLS=http://+:4444
+      # Local timezone so simulated events and history show your wall-clock time.
+      - TZ=${TZ:-America/Bogota}
